@@ -1,4 +1,17 @@
 <html>
+  <script>
+    var r = 255;
+    var g = 255;
+    var b = 255;
+    function sliderChange{
+      document.body.style.backgroundColor = ("rgb"("+r+","+g+"+b+")
+    }
+    function sliderChangeR(val){
+      r = val;
+      document.getElementById("rValue").innerHTML = r;
+      sliderChange();
+    }
+  </script>
 <button onclick="window.location.href='http://bai-was-taken.github.io/'"> 
 Go home:
 </button>
