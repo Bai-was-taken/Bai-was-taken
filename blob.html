@@ -36,6 +36,7 @@ canvas{ border: 2px solid black;}
  
   var x = 50;
   var y = 50;
+ var toggle = 1
  
   var canvas = document.getElementById('game');
   canvas.width = 600; //window.innerWidth;
@@ -81,12 +82,25 @@ canvas{ border: 2px solid black;}
     }
    
     if ((Math.abs(x-goalX))**2 + (Math.abs(y-goalY))**2 < (playerSize+goalSize)**2){
-      playerSize += 5;
+ //     playerSize += 5;
       goalX = Math.random() * canvas.width;
       goalY = Math.random() * canvas.height;
     }
-    var character = new Path2D();
-    character.arc(x, y, playerSize, 0, 2 * Math.PI)
+   var character = new Image();
+   var toggle +=1;
+   toggle %= 90; 
+   if (toggle > 30){
+   character.scr = 'Left 1.png';
+   }
+   else if (toggle > 60){
+    character.scr = 'Left 2.png';
+   }
+   else {
+    character.scr = 'Left 3.png';
+  }
+  character.addEventListener('Load', function(){
+   ctx.drawImage(character, x, y, 80, 60);
+  }, false);
    
     var goal = new Path2D();
     goal.arc(goalX, goalY, goalSize, 0, 2 * Math.PI)
