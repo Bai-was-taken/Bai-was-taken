@@ -89,10 +89,10 @@ canvas{ border: 2px solid black;}
    var character = new Image();
    var toggle +=1;
    toggle %= 90; 
-   if (toggle > 30){
+   if (toggle < 30){
    character.scr = 'Left 1.png';
    }
-   else if (toggle > 60){
+   else if (toggle < 60){
     character.scr = 'Left 2.png';
    }
    else {
