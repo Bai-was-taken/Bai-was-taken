@@ -8,7 +8,8 @@ canvas{ border: 2px solid black;}
 </head>
 <body>
  Use the arrow keys to move the blob. Try and get the dots. if the dot dose not apear, refresh the screen. 
-  <canvas id = "game"></canvas>
+ <br>
+ <canvas id = "game"></canvas>
 <script>
   var Key = {
   _pressed: {},
@@ -90,15 +91,15 @@ canvas{ border: 2px solid black;}
    var toggle +=1;
    toggle %= 90; 
    if (toggle < 30){
-   character.scr = 'Left 1.png';
+   character.src = 'Left 1.png';
    }
    else if (toggle < 60){
-    character.scr = 'Left 2.png';
+    character.src = 'Left 2.png';
    }
    else {
-    character.scr = 'Left 3.png';
+    character.src = 'Left 3.png';
   }
-  character.addEventListener('Load', function(){
+  character.addEventListener('load', function(){
    ctx.drawImage(character, x, y, 80, 60);
   }, false);
    
