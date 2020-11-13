@@ -7,9 +7,9 @@ canvas{ border: 2px solid black;}
 </style>
 </head>
 <body>
-  <img id="left1" src = "Left 1.png" width = "80" height = "60" alt= "Image failed to load" style="display:none">
-  <img id="left2" src = "Left 2.png" width = "80" height = "60" alt= "Image failed to load" style="display:none">
-  <img id="left3" src = "Left 3.png" width = "80" height = "60" alt= "Image failed to load" style="display:none">
+  <img id="left1" src = "Left 1 (1).png"  alt= "Image failed to load" style="display:none">
+  <img id="left2" src = "Left 2 (2).png"  alt= "Image failed to load" style="display:none">
+  <img id="left3" src = "Left 3 (3).png"  alt= "Image failed to load" style="display:none">
 
  Use the arrow keys to move the blob. Try and get the dots. if the dot dose not apear, refresh the screen. 
  <br>
@@ -102,7 +102,7 @@ canvas{ border: 2px solid black;}
    else {
    var character = document.getElementById("left3");
   }
-   ctx.drawImage(character, x-40, y-30, 80, 60);
+   ctx.drawImage(character, x-40, y-30);
    
     var goal = new Path2D();
     goal.arc(goalX, goalY, goalSize, 0, 2 * Math.PI)
