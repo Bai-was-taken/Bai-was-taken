@@ -7,6 +7,10 @@ canvas{ border: 2px solid black;}
 </style>
 </head>
 <body>
+  <img id="left1" scr = "left 1.png" width = "80" height = "60" alt= "Image failed to load" style="display:none">
+  <img id="left2" scr = "left 2.png" width = "80" height = "60" alt= "Image failed to load" style="display:none">
+  <img id="left3" scr = "left 3.png" width = "80" height = "60" alt= "Image failed to load" style="display:none">
+
  Use the arrow keys to move the blob. Try and get the dots. if the dot dose not apear, refresh the screen. 
  <br>
  <canvas id = "game"></canvas>
@@ -87,17 +91,17 @@ canvas{ border: 2px solid black;}
       goalX = Math.random() * canvas.width;
       goalY = Math.random() * canvas.height;
     }
-   var character = new Image();
    toggle +=1;
-   toggle %= 90; 
+   toggle %= 90;
+   
    if (toggle < 30){
-   character.src = 'Left 1.png';
+   character.src = document.getElementById("left1");
    }
    else if (toggle >=30 && toggle < 60){
-    character.src = 'Left 2.png';
+    character.src = document.getElementById("left2");
    }
    else {
-    character.src = 'Left 3.png';
+   character.src = document.getElementById("left3");
   }
   character.addEventListener('load', function(){
    ctx.drawImage(character, x, y, 80, 60);
