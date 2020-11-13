@@ -95,13 +95,13 @@ canvas{ border: 2px solid black;}
    toggle %= 90;
    
    if (toggle < 30){
-   character.src = document.getElementById("left1");
+   var character = document.getElementById("left1");
    }
    else if (toggle >=30 && toggle < 60){
-    character.src = document.getElementById("left2");
+    var character = document.getElementById("left2");
    }
    else {
-   character.src = document.getElementById("left3");
+   var character = document.getElementById("left3");
   }
   character.addEventListener('load', function(){
    ctx.drawImage(character, x, y, 80, 60);
