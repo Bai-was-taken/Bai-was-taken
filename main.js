@@ -17,8 +17,8 @@ let meteors = [{
 let keysPressed = {};
 function preload(){
     stars = loadImage("stars.png");
-    playerImage = loadImage("link.png");
-    meteorImage = loadImage("unnamed.png");
+    playerImage = loadImage("spaceship.png");
+    meteorImage = loadImage("meteor.png");
 }
 
 function setup(){
@@ -26,7 +26,7 @@ function setup(){
 }
 function draw(){
     background(0);
-    image(stars,0,0,1000,700);
+ //   image(stars,0,0,1000,700);
     image(playerImage, player.x, player.y);
     noFill();
     stroke(255);
