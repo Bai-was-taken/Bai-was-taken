@@ -64,8 +64,7 @@ function draw(){
         stroke(255);
         strokeWeight(3);
         rect(meteor.x,meteor.y,48,48);
-       meteor.yVel += 0.25;
-       meteor.y += meteor.yVel;
+        meteor.y -= 5
 
    });
    meteors.forEach((meteor,i) =>{
