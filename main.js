@@ -22,7 +22,7 @@ function preload(){
 }
 
 function setup(){
-    createCanvas(1000,700);
+    createCanvas(700,700);
 }
 function draw(){
     background(0);
@@ -44,7 +44,7 @@ function draw(){
     player.x += player.xVel;
     player.dazed-=1;
 
-    if(player.x<0 ||player.x >1000 - playerImage.width && player.dazed <= 0){
+    if(player.x<0 ||player.x >700 - playerImage.width && player.dazed <= 0){
         player.xVel *= -1;
         player.dazed = 30;
     }
