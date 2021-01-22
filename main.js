@@ -50,9 +50,11 @@ function draw(){
     }
    meteors.forEach(meteor => {
        image(meteorImage,meteor.x,meteor.y,48,48);
-       let touchingPlayer = overlappingRects(player.x, player.y, playerImage.width, playerImage.height, meteor.x, meteor.y, meteorImage.width, meteorImage.height);
+       let touchingPlayer = overlappingRects(player.x, player.y, player.width, player.height, meteor.x, meteor.y, meteorImage.width, meteorImage.height);
        if (touchingPlayer){
-           player.hp -= .10;
+            if (player.hp > 0){
+                player.hp -= .10;
+       }
        }
        noFill();
        if (touchingPlayer){
