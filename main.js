@@ -32,10 +32,10 @@ function draw(){
     background(0);
 
 
-    textSize(32)
-    background(0)
-    text(SCORE, 0, 0, 1000, 700)
- //   image(stars,0,0,1000,700);
+    textSize(32);
+    fill(255, 255, 255);
+    text(SCORE, 900, 40);
+ //  image(stars,0,0,1000,700);
     image(playerImage, player.x, player.y);
     noFill();
     stroke(255);
