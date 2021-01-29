@@ -1,7 +1,7 @@
 let stars;
 let playerImage;
 let meteorImage;
-let GAMEOVER = 1;
+let GAMEOVER = 0;
 let SCORE = 0; 
 let meteorChance = 0.02;
 let player = {
