@@ -34,7 +34,7 @@ function draw(){
 
     textSize(32)
     background(0)
-    text(score, 0, 0, 1000, 700)
+    text(SCORE, 0, 0, 1000, 700)
  //   image(stars,0,0,1000,700);
     image(playerImage, player.x, player.y);
     noFill();
