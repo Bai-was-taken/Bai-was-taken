@@ -20,7 +20,7 @@ let keysPressed = {};
 function preload(){
     stars = loadImage("stars.png");
     playerImage = loadImage("spaceship.png");
-    playerImage.resize(50, 100);
+    playerImage.resize(25, 50);
     meteorImage = loadImage("meteor.png");
 }
 
