@@ -1,6 +1,8 @@
 let stars;
 let playerImage;
 let meteorImage;
+let GAMEOVER = 1;
+let SCORE = 0; 
 let meteorChance = 0.02;
 let player = {
     x:500,
@@ -26,7 +28,13 @@ function setup(){
     createCanvas(700,700);
 }
 function draw(){
+    if (GAMEOVER == 0){
     background(0);
+
+
+    textSize(32)
+    background(0)
+    text(score, 0, 0, 1000, 700)
  //   image(stars,0,0,1000,700);
     image(playerImage, player.x, player.y);
     noFill();
@@ -72,6 +80,7 @@ function draw(){
    meteors.forEach((meteor,i) =>{
        if(meteor.y> height){
            meteors.splice(i,1);
+           SCORE += 1
        }
    })
    if(Math.random()<meteorChance){
@@ -84,6 +93,10 @@ function draw(){
    if (Math.random()<0.005){
        meteorChance += 0.01;
    }
+}
+if(player.hp <= 0){
+    GAMEOVER = 1
+}
 }
 
 function keyPressed(){
