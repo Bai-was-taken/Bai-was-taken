@@ -20,7 +20,6 @@ let keysPressed = {};
 function preload(){
     stars = loadImage("stars.png");
     playerImage = loadImage("spaceship.png");
-    playerImage.resize(25, 50);
     meteorImage = loadImage("meteor.png");
 }
 
@@ -37,6 +36,7 @@ function draw(){
     text(SCORE, 600, 40);
  //  image(stars,0,0,1000,700);
     image(playerImage, player.x, player.y);
+    playerImage.resize(50, 100);
     noFill();
     stroke(255);
     strokeWeight(3);
